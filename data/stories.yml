@@ -1,0 +1,246 @@
+version: "3.0"
+
+stories:
+
+- story: saludo inicial
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida
+
+- story: despedida
+  steps:
+  - intent: despedida
+  - action: utter_despedida
+
+- story: Cuales oficios 4ta categoria
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida  
+  - intent: 01_cuales_renta_cuarta
+  - action: utter_01_cuales_renta_cuarta
+
+- story: Inscripcion RUC
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 02_inscripcion_ruc
+  - action: utter_02_inscripcion_ruc
+
+- story: Recuperar clave SOL
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 03_recuperar_clave_sol
+  - action: utter_03_recuperar_clave_sol
+
+- story: Modificar datos RUC
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 04_modificar_datos_ruc
+  - action: utter_04_modificar_datos_ruc
+
+- story: Tramite terceros
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 05_tramite_terceros
+  - action: utter_05_tramite_terceros
+
+- story: Monto minimo emision rh
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 06_tope_monto_rxh
+  - action: utter_06_tope_monto_rxh
+
+
+- story: Cuando emitir rh
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 07_cuando_emitir_rxh
+  - action: utter_07_cuando_emitir_rxh
+
+- story: Obligacion emitir rh
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 08_quienes_emiten_rxh
+  - action: utter_08_quienes_emiten_rxh
+
+- story: Requisitos rh
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 09_requisitos_rxh
+  - action: utter_09_requisitos_rxh
+
+- story: Como emitir rh
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 10_como_emitir_rxh_nc
+  - action: utter_10_como_emitir_rxh_nc
+
+- story: Tipo de cambio
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 11_tipo_cambio_moneda_rxh
+  - action: utter_11_tipo_cambio_moneda_rxh
+
+- story: Registrar pagos
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 12_registrar_pagos_rxh
+  - action: utter_12_registrar_pagos_rxh
+
+- story: Como revertir  rxh
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 13_reversion_rxh
+  - action: utter_13_reversion_rxh
+
+- story: Cuando emitir rxh
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 14_cuando_emitir_nc
+  - action: utter_14_cuando_emitir_nc
+
+- story: Como reconocer ingreso rxh
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 15_cuando_reconocer_ingreso_rxh
+  - action: utter_15_cuando_reconocer_ingreso_rxh
+
+- story: Consultar rxh
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 16_consultar_rxh
+  - action: utter_16_consultar_rxh
+
+- story: Verificar suspension renta
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 17_verificar_suspension
+  - action: utter_17_verificar_suspension
+
+- story: Quienes retienene impuestos
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 18_quienes_retienen_rxh
+  - action: utter_18_quienes_retienen_rxh
+
+- story: Maximo monto rxh
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 19_tope_monto_retencion_rxh
+  - action: utter_19_tope_monto_retencion_rxh
+
+- story: Cuando solicitar suspension
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 20_cuando_solicitar_suspension
+  - action: utter_20_cuando_solicitar_suspension
+
+- story: Como generar suspension
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 21_como_generar_suspension
+  - action: utter_21_como_generar_suspension
+
+- story: Vigencia suspension
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 22_vigencia_suspension
+  - action: utter_22_vigencia_suspension
+
+- story: Quienes declaran 4ta
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 23_quienes_declaracion_4ta
+  - action: utter_23_quienes_declaracion_4ta
+
+- story: Pagos impuestos 4ta
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 24_pago_impuesto_4ta
+  - action: utter_24_pago_impuesto_4ta
+
+- story: Cronograma vencimiento
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 25_cronograma_vencimiento_declaracion
+  - action: utter_25_cronograma_vencimiento_declaracion
+
+- story: Estado de solicitud
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 41_ws_estado_solicitud_devolucion
+  - action: utter_41_ws_estado_solicitud_devolucion
+
+- story: Consultar condicion domicilio
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 42_ws_condicion_domicilio_fiscal
+  - action: utter_42_ws_condicion_domicilio_fiscal
+
+- story: Estado RUC
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 43_ws_estado_ruc
+  - action: utter_43_ws_estado_ruc
+
+- story: Consutar UIT
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 44_ws_cual_uit
+  - action: utter_44_ws_cual_uit
+
+- story: Tramite terceros
+  steps:
+  - intent: saludos
+  - action: utter_bienvenida    
+  - intent: 05_tramite_terceros
+  - action: 45_ws_cual_tipo_cambio
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

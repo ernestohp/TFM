@@ -1,0 +1,112 @@
+version: "3.0"
+
+intents:
+  - 01_derecho_devolucion
+  - 02_requisitos_consulta
+  - 03_calculo_monto_devolver
+  - 04_visualizar_gastos
+  - 05_gastos_deducibles
+  - 06_conceptos_credito_hipotecario
+  - 07_total_devolver
+  - 08_proceso_devolucion
+  - 09_quien_devolucion
+  - 10_que_cuenta_devolucion
+  - 11_no_conforme_monto_devolucion
+  - 12_visualizar_retenciones
+  - 13_comunicacion_atribucion_copropietario
+  - 14_plazo_devolucion
+  - 15_tipo_comprobante_deduccion
+  - 16_requisitos_comprobantes
+  - 17_porcentaje_deduccion
+  - 18_tasa_interes
+  - 19_presentar_declaracion
+  - 20_conceptos
+  - 01_cuales_renta_cuarta
+  - 02_inscripcion_ruc
+  - 03_recuperar_clave_sol
+  - 04_modificar_datos_ruc
+  - 05_tramite_terceros
+  - 06_tope_monto_rxh
+  - 07_cuando_emitir_rxh
+  - 08_quienes_emiten_rxh
+  - 09_requisitos_rxh
+  - 10_como_emitir_rxh_nc
+  - 11_tipo_cambio_moneda_rxh
+  - 12_registrar_pagos_rxh
+  - 13_reversion_rxh
+  - 14_cuando_emitir_nc
+  - 15_cuando_reconocer_ingreso_rxh
+  - 16_consultar_rxh
+  - 17_verificar_suspension
+  - 18_quienes_retienen_rxh
+  - 19_tope_monto_retencion_rxh
+  - 20_cuando_solicitar_suspension
+  - 21_como_generar_suspension
+  - 22_vigencia_suspension
+  - 23_quienes_declaracion_4ta
+  - 24_pago_impuesto_4ta
+  - 25_cronograma_vencimiento_declaracion
+  - 41_ws_estado_solicitud_devolucion
+  - 42_ws_condicion_domicilio_fiscal
+  - 43_ws_estado_ruc
+  - 44_ws_cual_uit
+  - 45_ws_cual_tipo_cambio
+  - saludos
+  - agradecimiento
+  - despedida
+  - acoso_sexual
+  - insultos
+
+entities:
+- trabajo
+- 4ta
+- nombre
+- profesion
+- requisito
+- ruc
+- recibo
+- intereses
+- copropietario
+- quien_deposita
+- profesion
+- comprobante
+- servicios_medicos
+- 1era
+- 4ta
+- moneda
+- declaracion
+- hipotecario
+- oficio
+- ruc
+- Servicios de cuarta
+- clave_sol
+
+responses:
+
+  utter_bienvenida:
+  - text: "¡Hola! Mi nombre es Sofía, ¿en qué te puedo ayudar?"
+  
+  utter_despedida:
+  - text: "Gracias por contactarme. Recuerda que para cualquier otra consulta puedes contar conmigo."
+
+
+slots:
+  nombre:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: nombre
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+actions:
+- utter_bienvenida
+- my_fallback_action
+- utter_despedida
+- action_respuesta1
+- action_servicio_web_ruc
+- action_servicio_web_uit
+- action_servicio_web_estado_domicilio

@@ -1,0 +1,960 @@
+version: "3.0"
+nlu:
+
+#----- Rentas de 5ta categoria----------
+- intent: 01_derecho_devolucion
+  examples: |
+    - Soy [profesion](profesion) no genere gastos, me devolveran?
+    - Buenos días, soy trabajador en planilla, quiero saber si tengo derecho a devolución
+    - Estoy en lista de beneficiarios a la devolución automática
+    - ¿Si durante el año nunca me retuvieron ni pague impuestos la SUNAT me devolverá de oficio?
+    - Soy 4ta y 5ta ategoría, como aplica para mi la devolución?
+    - Para recibir devolución tengo que ser persona natural?
+    - Cómo sé si me van a devolver?
+    - Soy un buen contribuyente me beneficia el tema de devolución?
+    - ¿Me podrá la SUNAT devolver de oficio?
+    - ¿SUNAT me devolverá de oficio?
+    - Como se si mi mamá le corresponde devolución?
+    - Me van a devolver algo?
+
+- intent: 02_requisitos_consulta
+  examples: |
+    - Necesito [requisito_consulta](requisito) para la devolución?
+    - ¿Qué pasa si no tengo [requisito_consulta](requisito)?
+    - Tengo que tener [requisito_consulta](requisito)?
+    - Mi [requisito_consulta](requisito) no esta activo, vale?
+    - Es importante tener [requisito_consulta](requisito) porque si no tengo tendria que sacarlo?
+    - Si no recuerdo mi [requisito_consulta](requisito) podre obtener mi devolución?
+    - Necesito tener [requisito_consulta](requisito) para tener derecho a devolución automática?
+    - Tengo que sacar [requisito_consulta](requisito) para tener devolucion automatica?
+    - Tengo que tener [requisito_consulta](requisito) para solicitar devolucion?
+    - Mi [requisito_consulta](requisito) esta de baja definitiva puedo solicitar devolucion automatica?
+    - Tener [requisito_consulta](requisito) es obligatorio?
+    - ¿Debo tramitar el [requisito_consulta](requisito) para que me devuelvan?
+    - Si no cuento con Numero de [requisito_consulta](requisito), de que forma puedo ver mi devolucion automatica?
+    - Tener [requisito_consulta](requisito) es requerido?
+    - necesito la [requisito_consulta](requisito) porque no me acuerdo?
+    - Necesito tener [requisito_consulta](requisito)?
+
+- intent: 03_calculo_monto_devolver
+  examples: |
+    - Sunat como realizo el calculo del importe a devolver?
+    - Como hacen para determinar la devolución?
+    - Donde veo cuanto me toca de devolucion?
+    - Como sabe sunat si tengo exceso de quinta?
+    - Como fue el calculo del monto a favor que tengo?
+    - Que formula aplica sunat para calcular la devolución?
+    - Que formula aplica sunat para la devolucion?
+    - Cual es la ruta para ver mi devolucion?
+    - Donde puedo encontrar lo calculado?
+
+- intent: 04_visualizar_gastos
+  examples: |
+    - Si ingreso con [requisito_consulta](requisito), puedo ver mis gastos adicionales?
+    - Ingreso con [requisito_consulta](requisito) consulta para ver mis gastos adicionales?
+    - Como veo que gastos tuve?
+    - Donde ingreso para consultar mis gastos adicionales de la [declaracion](declaracion)?
+    - Donde ingreso para consultar mis gastos?
+    - Como veo el total de los gastos de aportes por mi [profesion](profesion)?
+    - Como puedo visualizar los gastos que tuve?
+    - Como saber si el gasto se podría incluir en la deducción?
+
+- intent: 05_gastos_deducibles
+  examples: |
+    - Cuáles son los gastos para descontar?
+    - Cuales son los gastos aceptados por sunat?
+    - Saber que gastos están incluido dentro de la deducción adicional
+    - Que considera sunat en la deduccion adicional?
+    - Cuáles gastos SUNAT toma en cuenta para la devolución de quinta?
+    - Que gastos sunat toma en cuenta para que me devuelvan?
+    - Que gastos SUNAT toma en cuenta para la devolución de quinta?
+    - QUE GASTOS NO INCLUYEN EN LA DEVOLUCION?
+    - Que gastos ha considerado sunat en la devolucion?
+    
+- intent: 06_conceptos_credito_hipotecario
+  examples: |
+    - Si voy a pedir un [hipotecario] cuanto me devolveran?
+    - Tengo un [hipotecario], pero no es de mi [hipotecario]. Puedo deducir algo?
+    - Que pagos del [hipotecario] son aprobados?
+    - Tengo [hipotecario], cuenta para la devolucion de 5ta?
+    - Qué concepto de mi crédito puedo deducir?
+    - Cuanto de mis intereses por [hipotecario] puedo utilizar?
+    - Que conceptos de las mensualidades de mi [hipotecario] me hacen acreedor de la devolución?
+
+- intent: 07_total_devolver
+  examples: |
+    - Puedo usar todo el monto de devolucion?
+    - Puedo recibir el monto maximo de devolucion?
+    - Hasta que montos me pueden devolver?
+    - Hasta cuanto me pueden devolver?
+    - Que monto me devolvera sunat?
+    - Me vana devolver la totalidad por gastos con [essalud]?     
+    - Me devuelven la totalidad de 3 uit?
+    - Me devuelven el total de intereses?      
+
+- intent: 08_proceso_devolucion
+  examples: |
+    - Que documentos necesitan?
+    - Tengo que presentar algo?
+    - Que debo hacer para la devolucion?
+    - Tengo que presentar algo adicional para acceder a la devolucion?
+    - Como se hace para el reintegro?
+    - Que necesito hacer para la devolucion?
+    - Que necesito para la devolucion automatica?
+    - Q necesito hacer para q me devuelvan mi dinero?    
+
+- intent: 09_quien_devolucion
+  examples: |
+    - La plata quien me la va a dar?
+    - Los [quien_deposita] tienen el dinero a devolver o quién?
+    - Mi [quien_deposita] inmediato se encarga de la devolución?
+    - Me avisaron que yo no hago nada, quién lo hace, sunat?
+    - Solo sunat sede lima autoriza la devolución?
+    - Quién me devolverá mi plata?
+    - Quién debe realizar la devolución automática?
+    - Quién se encarga de devolverme la plata?
+    - Solo me devolverá mi [quien_deposita]a?
+    - Solo tengo que exigir a mi [quien_deposita] mi dinero?
+
+- intent: 10_que_cuenta_devolucion
+  examples: |
+    - Como hará la sunat para la devolucion?
+    - Cual es la forma de devolucion?
+    - La devolucion se hara en una sola parte
+    - Y como se realizara la devolucion?
+    - Como se realizará la devolucion?
+    - Por qué medios se realizará la devolucion automatica?
+    - En que medios se realizará la devolucion automática?
+    - La devolucion será integra?
+    - La devolucion se realizará por partes?
+    - Mi dinero me lo entregarán en las oficinas?
+    - Donde me entregaran mi plata?
+    - Como se realizara la devolucion automatica?
+
+- intent: 11_no_conforme_monto_devolucion
+  examples: |
+    - El importe de devolucion es inferior al esperado?
+    - Vi mi dinero y me han devuelto de mas, que debo hacer?
+    - El monto calculado es inferior al esperado?
+    - Nada me devuelven, que hago?
+    - No aparece el monto de la devolucion?
+    - Tengo que hacer algo? No aparece el monto de devolucion?
+    - Porque no hay monto de devolucion?
+
+- intent: 12_visualizar_retenciones
+  examples: |
+    - Donde veo mis remuneraciones?
+    - Como veo las retenciones que hizo mi empleador?
+    - Como hago para visualizar mis ingresos?
+    - Donde puedo ver mis ingresos remuneraciones y retenciones del 2017?
+    - Ingresando a mi [requisito_consulta] puedo verificar mis retenciones?
+    - Donde consulto mis haberes?
+    - Necesito ver informacion de mi sueldo?
+    - Donde veo la informacion de las remuneraciones?
+    - Quiero ver la informacion de mis remuneraciones?
+    - ¿cómo se cuantas son mis retenciones?
+    - En mi boleta de pago de remuneraciones puedo
+
+
+- intent: 13_comunicacion_atribucion_copropietario
+  examples: |
+    - Cómo hago la atribucion de gasto?
+    - Cuando termina el proceso para atribuir?
+    - Cual es la fecha máxima para la atribución de gastos del [copropietario]?
+    - Por que medio puedo hacer la atribucion de gastos por intereses por [hipotecario] para mi [copropietario]?
+    - Cual es la fecha maxima que tengo para atribuirle a mi [copropietario] el 50% de mi [hipotecario]?
+    - Como se si he atribuido el 50% de los [intereses] por el credito?
+    - Tengo un [hipotecario] puedo transferir este gasto a mi [copropietario]?
+    - Hay un plazo maximo para que mi [copropietario] me pueda atribuir el 50% del pago del alquiler de vivienda?
+    - Puedo pasar a mi [copropietario] la mitad de mis gastos para la devolucion?
+    - Quiero atribuir
+
+- intent: 14_plazo_devolucion
+  examples: |
+    - Cuando me darán mi dinero?
+    - En que momento me devolverán?
+    - Los feriados se contabilizan para mi devolucion?
+    - En que periodo se hace la devolucion?
+    - Tengo q esperar para la devolucion?
+    - Debo esperar para la devolucion?
+    - Cuando me pagarán la devolucion?
+    - La devolución es rápida?
+    - Quiero que me paguen, cuando será?
+    - Quiero que me paguen, para cuando señores de sunat?
+    - Hasta cuando puedo recoger el dinero de la devolucion?
+    - Hasta cuando puedo reclamar mi dinero?
+    - Hasta cuando me depositarán mi devolución?
+
+- intent: 15_tipo_comprobante_deduccion
+  examples: |
+    - Sunat como realizo el calculo del importe a devolver?        
+    - Que documento debo presentar para sustentar el gasto por [1era]?
+    - Que [comprobante] debo pedir a mi [servicios_medicos] para la deduccion de 3 uit?
+    - Con que documento acredito el gasto por [1era]?
+    - Que documentos debo presentar para acceder a la devolucion automatica?
+    - Valen los [comprobante], servicios para sustentar gastos personales?
+    - Se me extravio mis pagos de [1era], que puedo hacer para sustentar mis pagos?
+    - Si me emiten una nota de venta y proforma sustentado el gasto por [1era]?
+
+
+- intent: 16_requisitos_comprobantes
+  examples: |
+    - Hasta cuanto puedo deducir de mi pago de [1era] para mi renta de 5ta?
+    - Los contratos de [1era] deben de estar legalizados notarialmente?
+    - Si mi [servicios_medicos] olvido ingresar mi ruc en el [comprobante], me sirve el [comprobante] para sustentar el gasto?
+    - Las [comprobante] deben estar a mi nombre?
+    - Son validos mis [comprobante] en [moneda]?
+    - Si pague en efectivo los servicios de @4ta es valido para deducirlo como gasto?
+    - Cuales son los requisitos para sustentar mis gastos por [servicios_medicos]?
+    - Que es lo que tengo que pedir para sustentar gastos personales?
+    - Que le debo pedir al [servicios_medicos] para deducir gasto?
+    - Si quien emite el [comprobante] por gastos personales esta no habido es válido dicho documento para sustentar gasto?
+    - Puedo pagar en efectivo los [servicios_medicos]?
+
+
+- intent: 17_porcentaje_deduccion
+  examples: |
+    - Si paso [1era] de mi vivienda, cuánto me deducirán?
+    - Las deducciones porcentuales de los gastos.
+    - Se puede deducir el 100% de los gastos?
+    - Cuanto es el porcentaje de deduccion de los gastos?
+    - Cuanto es el deducible para los gastos?
+    - Porcentaje de deduccion de gastos.
+    - % a deducir de los gastos.
+    - Hasta que monto puedo deducir de mis gastos?
+    - Si pago el [1era] de mi depa, que % me deducirán?
+    - Si voy al [servicios_medicos] cuándo me reducirán del gasto?
+    - De lo que le pagué al [servicios_medicos], cuanto se deduce?
+    - Cuanto se deducirá de los gastos por [1era]?
+    - Cuanto me puede deducir de gastos por [4ta]?
+    - Sunat me devolvera parte de los gastos por servicios?
+    - Sunat me devolvera el total de los gastos por [1era]?
+    - Si me atiende un [profesion], ¿cuánto puedo deducir?
+    - Cuanto porcentaje descuento de los pagos que hice?
+
+- intent: 18_tasa_interes
+  examples: |
+    - La web de sunat te indica el % de [intereses] sujeto a mi devolucion.
+    - Que tasa de [intereses] annual utilizan?
+    - A que tasa devuelven los [intereses]?
+    - A partir de cuanto aplican la tasa de [intereses]?
+    - Sunat me pagara con [intereses] si demoran en devolver?
+    - Me devolveran con [intereses]?
+    - Cuanto es el pago por atraso?
+    - Me devolveran el dinero con [intereses]?
+    - Me devolveran con [intereses]?
+    - Cual es la taza a utilizar para la devolucion?
+    - Cual es la taza de la devolución?   
+
+- intent: 19_presentar_declaracion
+  examples: |
+    - Si no realizo la [declaracion]?
+    - Es necesario presentar la [declaracion]?
+    - No he hecho mi [declaracion] todavía, tengo que hacerla?
+    - Tengo que declarar si tengo intereses de [hipotecario]?
+    - La sunat pide como condición para acceder a la devolución de oficio que se presente previamente la [declaracion]?
+    - Si no presento [declaracion] no accedo a la devolución de oficio?
+    - Tengo que declarar para que me den la devolución?
+    - Estoy de acuerdo con el monto a favor es necesario declarar?
+    - La devolución de oficio procederá solo si presento la [declaracion]?
+    - Si no presento el [declaracion] no accederá a la devolución de oficio?
+    - Es un requisito para acceder a la devolución de oficio que se presente [declaracion]?
+    - La devolución automática solo se aplicará para los que presentaron su [declaracion]?
+    - Estoy obligado a hacer la [declaracion] para la devolución automática?
+    - Si no cumplo con presentar mi [declaracion] de igual forma seré beneficiado con la devolución de oficio?
+    - Qué pasa si no he hecho mi [declaracion]?
+
+- intent: 20_conceptos
+  examples: |
+    - De que trata el [hipotecario]?
+    - Que es un recibo por arrendamiento?
+    - Que es la declaracion jurada anual?
+    - Que son intereses compensatorios?
+    - Que son creditos hipotecarios?
+    - Que es recibo por honorarios?
+    - Significado de intereses compensatorios?
+    - Que es el rxh?
+    - Significado de recibo por honorarios?
+    - Que significa condiciones de domicilio?
+    - Que es la devolucion?
+    - Que es devolucion automatica?
+    - ¿qué son los recibos ?
+    - Que es la declaracion jurada?
+    - Que es la dd.jj 2017?
+
+
+#----- Rentas de 4ta categoria----------
+- intent: 01_cuales_renta_cuarta
+  examples: |
+    - tengo mi [oficio](trabajo) cuales serian las [Servicios de cuarta](4ta)
+    - Como se cuales son las [Servicios de cuarta](4ta)
+    - Quiero saber si soy de [Servicios de cuarta](4ta) que tengo que hacer
+    - Quienes tienen [Servicios de cuarta](4ta)
+    - Soy [profesion](profesion) mi renta es de [Servicios de cuarta](4ta)
+    - Trabajo en una [oficio](trabajo) mi renta es de [Servicios de cuarta](4ta)
+    - Como se si soy de [Servicios de cuarta](4ta)
+    - Trabajo por horas en un [oficio](trabajo) mi renta es de [Servicios de cuarta](4ta)
+    - Soy el [profesion](profesion) en una empresa eso es [Servicios de cuarta](4ta)
+    - Que abarca las [Servicios de cuarta](4ta)
+    - Si soy ayudante de [profesion](profesion) puedo tributar como [Servicios de cuarta](4ta)
+
+- intent: 02_inscripcion_ruc
+  examples: |
+    - Que debo hacer para formalizar mi [oficio](trabajo)
+    - Necesito tener documentos para obtener el [ruc](ruc)
+    - Que documentos necesito para la obtención del [ruc](ruc)
+    - Debo tener documentos para obtener mi [ruc](ruc)
+    - Necesito tener papeles para inscribirme al [ruc](ruc)
+    - Necesito llevar algo para obtener mi [ruc](ruc)
+    - Necesito [recibo_por_honorario](recibo) para inscribrirme al [ruc](ruc)?
+    - Como puedo tramitar el [ruc](ruc)
+    - Puedo tramitar el [ruc](ruc) con carnet
+
+- intent: 03_recuperar_clave_sol
+  examples: |
+    - Es posible recuperar mi [clave_sol] virtualmente
+    - Cual es la ruta para generar [clave_sol]
+    - Como recuperar mi [clave_sol] si he olvidado la [clave_sol]
+    - Como solicitar la [clave_sol] por internet
+    - El [clave_sol] no pasa como hago
+    - Que requisitos hay para obtener mi [clave_sol]
+    - Qué datos me piden para recuperar mi [clave_sol]
+    - Cuáles son los requisitos para generar [clave_sol]
+    - Que necesito para generar mi [clave_sol]
+    - Cuál es la ruta para recuperar mi [clave_sol]
+    - A que opción de la página de Sunat puedo generar [clave_sol]
+    - Perdi mi [clave_sol] de internet como la recupero
+
+- intent: 04_modificar_datos_ruc
+  examples: |
+    - Como cambio mi numero de telefono en mi ficha @ruc de cuarta
+    - Mi domicilio ha cambiado, puedo cambiarlo por internet?
+    - Puedo modificar algún dato del @ruc por internet?
+    - Quiero cambiar el teléfono, se puede hacer por aquí?
+    - Vale si cambio algún dato vía telefónica?
+    - Qué campo del @ruc puedo cambiar por la web?
+    - Quiero actualizar mi correo electronico puedo cambiarlo por internet
+    - Puedo actualizar mi profesión por telefono
+    - Puedo cambiar mi profesión por internet
+    - Puedo cambiar mi domicilio fiscal por internet
+    - Puedo cabiar mi domiciio fiscal por telefono
+    - Que modificaciones al @ruc puedo hacer con mi @4ta  
+
+
+ - intent: 05_tramite_terceros
+  examples: |
+    - Puede mi @tercero realizar tramites presenciales
+    - Que tramites presenciales no puede realizar un @tercero
+    - Yo puedo autorizar a un @tercero para hacer un tramite personal
+    - Para autorizar a un @tercero basta una carta simple
+    - Puedo mandar a un @tercero a realizar mi tramite
+    - Puedo mandar a @tercero para que averigue sobre mi retencion
+    - Hola, deseo hacer una diligencia a traves de un @tercero, se puede
+    - Es necesario una carta poder para que un @tercero realice una gestion personal
+    - @tercero puede hacer mi tramite
+    - Mi @tercero podra hacer un tramite mio, que tiene que llevar
+    - Que tiene que llevar mi @tercero para hacer un tramite mio
+    - Soy analfabeto pero tengo oficio puedo decirle a otro que haga el tramite
+    - No tengo tiempo de ir, puedo enviar una persona
+    - Que documentos necesito si el tramite es realizado por un @tercero
+
+- intent: 06_tope_monto_rxh
+  examples: |
+    - Mi duda es si puedo emitir mi @recibo_por_honorarios por un monto indefinido?
+    - Hay un monto para los @recibo_por_honorarios
+    - Hasta que monto puedo emitir los @recibo_por_honorarios
+    - Para emitir @recibo_por_honorarios hay un monto máx?
+    - Puedo emitir mi @recibo_por_honorarios por s/. 10.00 o hay un monto @tope ?
+    - Existe un monto @tope para girar mis @recibo_por_honorarios ?
+    - Desde que monto debo emitir los @recibo_por_honorarios
+    - Hay algún @tope para emitir un @recibo_por_honorarios ?
+    - Existe un monto @tope para emitir @recibo_por_honorarios
+    - Presté un servicio por s/. 30, debo emitir @recibo_por_honorarios ?
+    - Hay algun @tope de monto para emitir mi @recibo_por_honorarios
+    - Puedo emitir @recibo_por_honorarios con algun monto @tope ?
+    - Buenos días, solo quiero
+
+- intent: 07_cuando_emitir_rxh
+  examples: |
+    - Se debe emitir @recibo_por_honorarios por pagos parciales?
+    - Cuando emito mi @recibo_por_honorarios
+    - Puedo girar mi @recibo_por_honorarios en cualquier momento con mi @ruc
+    - En caso no me cancelen el total, debo emitir @recibo_por_honorarios ?
+    - Puedo entregar @recibo_por_honorarios cuando aun no me cancelan
+    - Me piden entregar @recibo_por_honorarios pero aun no me cancelan
+    - Se puede emitir un @recibo_por_honorarios aun no haya pagado?
+    - Me piden emitir un @recibo_por_honorario de mi @trabajo y aún no me han cancelado
+    - Puedo emitir el @recibo_por_honorarios hoy
+    - Quieren que emita @recibo_por_honorarios de un @trabajo pero aun no me cancelan
+    - Puedo emitir @recibo_por_honorarios antes de que me haya pagado?
+    - Se debe emitir el @recibo_por_honorarios por mi @trabajo cuando no me cancelen el pago?
+    - Puedo emitir el @recibo_por_honorarios antes de que me paguen
+    - En que situación debo hacer un @recibo_por_honorarios
+    - Cuando estoy obligado a emitir @recibo_por_honorarios
+
+- intent: 08_quienes_emiten_rxh
+  examples: |
+    - Tengo que hacer @recibo_por_honorarios
+    - Estoy obligado en todos los casos a emitir @recibo_por_honorarios
+    - Si mi servicio no es a una empresa debo tambien emitir @recibo_por_honorarios
+    - Quienes deben emitir @recibo_por_honorarios y como se realiza
+    - Si ayude en la @trabajo de una casa estoy obligado a girar un @recibo_por_honorarios
+    - Una empresa me pago la movilidad y viaticos para realizar mi servicio, debo emitir @recibo_por_honorarios x dicho concepto
+    - Si no tengo ruc estaria en la obligacion de emitir @recibo_por_honorarios
+    - Que personas estan obligados a emitir recibos x honorarios
+    - Si solo preste servicios una vez al año y no gire un @recibo_por_honorarios igual estoy obligado a emitirlo
+    - Si soy @4ta y adicional presto un servicio a mi empleador debo emitirle un @recibo_por_honorarios
+    - Si doy @trabajo a domicilio la debo entregar algun @recibo_por_honorarios
+    - Puedo emitir @recibo_por_honorarios si soy dependiente en una empresa
+
+- intent: 09_requisitos_rxh
+  examples: |
+    - Que supuestos deben darse para emitir mi @recibo_por_honorarios
+    - Detallame los requisitos para poder emitir @recibo_por_honorarios
+    - Cuales son los requisitos para poder emitir un @recibo_por_honorarios
+    - Dime que es lo que necesito para dar @recibo_por_honorarios
+    - Que requisitos debo cumplir para emitir @recibo_por_honorarios
+    - Debo tener @ruc para emitir @recibo_por_honorarios
+    - Debo tener @clave_sol para emitir @recibo_por_honorarios
+    - Debo tener una @trabajo para emitir @recibo_por_honorarios
+    - Que condicion debo tener para emitir @recibo_por_honorarios
+    - Para emitir @recibo_por_honorarios necesito tener domicilio @situacion_domicilio_fiscal
+    - Que debo cumpir para la emision de un @recibo_por_honorarios
+    - Existen requisitos para poder emitir @recibo_por_honorarios si soy independiente
+
+- intent: 10_como_emitir_rxh_nc
+  examples: |
+    - Deseo emitir una @nota_de_credito, me podrías indicar cómo puedo hacerlo?
+    - Quiero obtener mi @nota_de_credito, ayudame
+    - Necesito ayuda para emitir mi @recibo_por_honorarios
+    - Quiero sacar mi @recibo_por_honorarios, como puedo hacer?
+    - Como puedo emitir un documento en SUNAT?
+    - Que debo hacer para emitir un @recibo_por_honorarios electronico?
+    - Tengo que dar una @nota_de_credito, como se hace eso?
+    - Como se emite un @recibo_por_honorarios
+    - Que debo saber para la emisión de @recibo_por_honorarios
+    - Que debo saber del proceso para emitir @recibo_por_honorarios
+    - Quiero saber emitir @recibo_por_honorarios
+    - Como puedo presentar una @nota_de_credito
+    - Como puedo hacer para presentar una @nota_de_credito
+    - Que debo hacer para emitir @recibo_por_honorarios
+
+- intent: 11_tipo_cambio_moneda_rxh
+  examples: |
+    - Puedo generar un @recibo_por_honorarios en dolares?
+    - El @tipo_cambio que usaré es el de la fecha que me pagan o cuando genero el @recibo_por_honorarios ?
+    - Con que @tipo_cambio calculo los @recibo_por_honorarios en otras monedas?
+    - Que valor debe tener la moneda extranjera para poder emitir un @recibo_por_honorarios ?
+    - Se puede emitir @recibo_por_honorarios en @moneda?
+    - Es necesario que mis @recibo_por_honorarios sean en @moneda? No puedo cambiar?
+    - Indicarme que @tipo_cambio es favorable al emitir @recibo_por_honorarios
+
+- intent: 12_registrar_pagos_rxh
+  examples: |
+    - Emiti @recibo_por_honorarios, como los registro?
+    - He emitido @recibo_por_honorarios , como hago para registrarlos
+    - Emití @recibo_por_honorarios , como los registro
+    - Es obligatorio el registro de los pagos
+    - Es obligatorio registrar los pagos @recibo_por_honorarios
+    - Obligatoriamente debo registrar mis @recibo_por_honorarios
+    - Se ponen en un sistema los @recibo_por_honorarios emitidos
+    - Se deben poner los @recibo_por_honorarios en un sistema
+    - Tengo la obligación de meter en el sistema mis @recibo_por_honorarios?
+    - Tengo la obligación de registrar mis @recibo_por_honorarios?
+    - Tengo que digitar los @recibo_por_honorarios emitidos
+    - Si es un @recibo_por_honorarios electrónico tambien se debe registrar?
+    - Registrar el pago de un @recibo_por_honorarios es obligatorio? Por qué?
+    - Es necesario que se registren los @recibo_por_honorarios?
+    - Como registro el pago de mis @recibo_por_honorarios?
+    - Es necesario regitrar mis @recibo_por_honorarios?
+    - Cuando registro mi @recibo_por_honorarios?
+    - Donde registro mi @recibo_por_honorarios?
+    - Debo anotar mis @recibo_por_honorarios electrónicos emitidos en algun libro de ingresos?
+
+- intent: 13_reversion_rxh
+  examples: |
+    - Qué ruta sigo para revertir un @recibo_por_honorarios
+    - Existe una manera de cambiar un @recibo_por_honorarios?
+    - Después de emitir mi @recibo_por_honorarios puedo anularlo en qué casos?
+    - El @recibo_por_honorarios se puede cambiar o anular?
+    - Qué errores me obligan revertir mis @recibo_por_honorarios electrónicos?
+    - Es posible cambiar el importe de un @recibo_por_honorarios?
+    - Cómo revierto un @recibo_por_honorarios?
+    - Si no me pagan debo anular el @recibo_por_honorarios?
+    - Debo anular mi @recibo_por_honorarios cuando me equivoco en el llenado del @ruc del usuario?
+    - Me equivoque en el importe de mi @recibo_por_honorarios, puedo cambiarlo?
+    - Qué requisitos debo cumplir para revertir mis @recibo_por_honorarios
+    - Puedo modificar un @recibo_por_honorarios emitido?
+    - Si me equivoqué en el monto de mi @recibo_por_honorarios debo anularlo o revertirlo?
+
+- intent: 14_cuando_emitir_nc
+  examples: |
+    - Cuándo uso las @nota_de_credito?
+    - Si el estado no me paga, debo emitir @nota_de_credito?
+    - En qué situación emito una @nota_de_credito?
+    - En que momento emito una @nota_de_credito electrónica
+    - En qué momento se deben emitir las @nota_de_credito electrónicas?
+    - En qué momento emitiría mis @nota_de_credito electrónicas?
+    - En qué casos corresponde emitir @nota_de_credito?
+    - Cómo sé cuándo debo emitir las @nota_de_credito electrónicas?
+
+- intent: 15_cuando_reconocer_ingreso_rxh
+  examples: |
+    - Si en mi @recibo_por_honorarios coloqué como fecha de emisión @meses y me pagan el @meses cuándo se reconoce el ingreso?
+    - Cómo saber que un @recibo_por_honorarios emitido en @año_pasado y pagado en @año_actual no es ingreso para @año_pasado
+    - Si emití un @recibo_por_honorarios el @año_pasado y aún no me pagan, debo declararlo?
+    - Cuando considero como ingreso un @recibo_por_honorarios emitido para mi @declaracion?
+    - En que momento se reconoce el ingreso, cuando brindo el servicio o cuando me pagan?
+    - Si algunos @recibo_por_honorarios del @año_pasado me los pagaron el @año_actual, en qué año los declaro?
+    - Se considera ingreso en el mes que se paga, no importa que se haya emitido el @recibo_por_honorarios con anterioridad?
+
+- intent: 16_consultar_rxh
+  examples: |
+    - Como veo mis @recibos_por_honorarios
+    - Como puedo visualizar los @recibo_por_honorarios emitidos
+    - Como hago para visualizar mis @recibo_por_honorarios
+    - Emití un @recibo_por_honorarios , donde esta ?
+    - Donde puedo encontrar el @recibo_por_honorarios que emiti
+    - Donde encuentro un @recibo_por_honorarios que emití
+    - Si emití un @recibo_por_honorarios donde lo puedo encontrar
+    - Donde están mis @recibo_por_honorarios
+    - Si emití @recibo_por_honorarios donde estan
+    - Como encontrar mis @recibo_por_honorarios emitidos
+    - Como encontrar mis @recibo_por_honorarios del @año_pasado
+    - Como se puede consultar los @recibo_por_honorarios
+
+- intent: 17_verificar_suspension
+  examples: |
+    - Como verifico si presente mi @suspension_retencion o no
+    - No recuerdo si presente mi @suspension_retencion, ayuda
+    - Quiero saber si mi @suspension_retencion la hice bien
+    - Necesito verificar si presente mi @suspension_retencion, me ayudas
+    - No recuerdo haber presentado mi @suspension_retencion, me puede confirmar
+    - Puedo ver las fechas en las que presente mi @suspension_retencion
+    - Quiero asegurarme de haber presentado mi @suspension_retencion de manera correcta, que hago
+    - Ayudame a saber si presente mi @suspension_retencion
+    - Me puede ayudar, cuando presente mi @suspension_retencion, debo hacerlo de nuevo
+    - Como se si mi @suspension_retencion ha sido presentada correctamente
+    - Se proceso bien mi @suspension_retencion, en donde lo veo
+    - No se si presenté mi @suspension_retencion donde puedo revisar
+    - Olvide si tengo @suspension_retencion, donde lo veo
+
+- intent: 18_quienes_retienen_rxh
+  examples: |
+    - La @empresa donde trabajo debe retenerme
+    - La @entidades_retencion donde trabajo debe hacer retención de @recibo_por_honorarios
+    - Quienes me van a retener
+    - Que empresas hacen retencion
+    - Listado de empresas que retiene @recibo_por_honorarios?
+    - La @entidades_retencion puede retener el @recibo_por_honorarios?
+    - Quién puede retenerme mis @recibo_por_honorarios?
+    - Quiénes me retienen los @recibo_por_honorarios?
+    - Cuándo pueden retenerme los @recibo_por_honorarios?
+    - Qué @entidades_retencion me pueden retener los @recibo_por_honorarios?
+    - Quienes deben retener mis @recibo_por_honorarios?
+    - Qué @entidades_retencion están obligadas a retener los @recibo_por_honorarios?
+
+- intent: 19_tope_monto_retencion_rxh
+  examples: |
+    - Si supero los 2000 soles me deben retener
+    - Una @entidades_retencion me va a pagar 3 mil soles me va a descontar
+    - Si emito @recibo_por_honorarios por 1000 me retienen
+    - Hay monto @tope para la retencion
+    - Si tengo @recibo_por_honorarios de 600 soles me retienen
+    - Si no supero los 3000 soles me deben de retener
+    - Si emito un @recibo_por_honorarios por 1500 soles, me retienen
+    - Hay un monto minimo para la retención?
+    - A partir de que monto debo hacer pagos de impuesto por retencion sumando lo del @fecha?
+    - Si me pagan 3000 por @recibo_por_honorarios una @entidades_retencion, tendre que pagar algo de impuesto?
+    - A partir de que monto me descuentan por girar mis @recibo_por_honorarios
+    - Hay retencion por montos mayores como @profesion de @4ta
+
+- intent: 20_cuando_solicitar_suspension
+  examples: |
+    - Que requisitos tienen a una @suspension_retencion
+    - Que requisitos tiene la @suspension_retencion
+    - Hay monto que no se debe superar para realizar la @suspension_retencion de @4ta?
+    - Desde que @fecha puedo hacer mi @suspension_retencion
+    - Cuando puedo hacer la @suspension_retencion
+    - Cuando es el tiempo de pedir @suspension_retencion
+    - Cuándo debo generar mi @suspension_retencion
+    - Cuando tengo que solicitar mi solicitud de @suspension_retencion
+    - En qué casos solicito la @suspension_retencion?
+    - En que casos puede solicitar la @suspension_retencion?
+    - En que momento puede solicitar la @suspension_retencion?
+    - Cuándo debo generar mi @suspension_retencion?
+    - Cuándo se debe emitir la @suspension_retencion?
+    - Qué debo tener en cuenta para solicitar la @suspension_retencion?
+    - Puedo solicitar la @suspension_retencion cuando yo quiera?
+    - En que momento puedo pedir la @suspension_retencion?
+    - Hay algún requisito para solicitar la @suspension_retencion?
+    - Cuando puedo solicitar la @suspension_retencion
+
+- intent: 21_como_generar_suspension
+  examples: |
+    - Puedo presentar la @suspension_retencion via online
+    - Cómo obtener mi @suspension_retencion
+    - Dime en que lugar puedo hacer mi @suspension_retencion
+    - Dime los pasos para poder suspender mi @4ta
+    - Pasame el link del @suspension_retencion
+    - ¿cómo suspendo mis @4ta ?
+    - ¿con qué formulario realizó la @suspension_retencion?
+    - ¿cómo evito que me retengan por @recibo_por_honorarios?
+    - ¿dónde realizó la @suspension_retencion?
+
+- intent: 22_vigencia_suspension
+  examples: |
+    - Hasta cuando me sirve la @suspension_retencion que tramite?
+    - Si hago mi @suspension_retencion, servira para todos los años?
+    - La @suspension_retencion me sirve para @tipo_año?
+    - Hasta cuando me sirve la @suspension_retencion que tramité?
+    - @inicio_conversacion hasta cuando tiene vigencia mi @suspension_retencion
+    - La @suspension_retencion me vale solo para @tipo_año?
+    - Cuando expira mi @suspension_retencion
+    - Tiene fecha limite la @suspension_retencion
+    - Tengo una @suspension_retencion de @año_pasado vale para @año_actual
+    - Tengo mi @suspension_retencion de @tipo_año sigue vigente
+    - Realicé mi @suspension_retencion en @meses hasta cuando esta vigente
+    - Cuando se acaba mi @suspension_retencion
+
+- intent: 23_quienes_declaracion_4ta
+  examples: |
+    - Me inscribi en el @ruc en marzo debo empezar a declarar desde @meses
+    - Cual es el medio por el cual presento mi @declaracion
+    - Estoy obligado a presentar @declaracion
+    - Si cobre 100 soles por enserñar surf debo declararlo
+    - Cuando debo realizar @declaracion
+    - Todos los meses debo pagar @4ta
+    - Como saber si estoy obligado a presentar mis @declaracion por @recibo_por_honorarios
+    - Si no tengo montos por regularizar, tengo la obligacion de presentar @declaracion
+
+- intent: 24_pago_impuesto_4ta
+  examples: |
+    - En que banco puedo pagar la @4ta
+    - No hay banco de la nacion por donde vivo, puedo pagar en otro banco
+    - Puedo pagar mis impuestos de @4ta en las oficinas de sunat
+    - Generando un @nps puedo pagar @4ta
+    - Cual es el codigo de tributo para pagar @4ta
+    - En que formulario se paga la @4ta
+    - Puedo pagar mis impuestos con una transferencia desde el extranjero
+    - Donde pago mi retencion de @4ta
+    - Que formulario uso para pagar retencion de @4ta
+    - Puedo hacer el pago de la @4ta en linea
+    - Puedo hacer mis pagos mensuales de @4ta con @medio_cobro_devolucion
+    - Puedo pagar con detraccion de @4ta
+    - Como realizar los pagos de las @declaracion
+    - Cuales son los agentes bancarios automatizados para realizar mi pago de @4ta
+    - Con un @nps puedo pagar mi @4ta
+
+- intent: 25_cronograma_vencimiento_declaracion
+  examples: |
+    - Cuando es el @fecha para presentar mis @declaracion de @4ta
+    - Cuando caducan mis @declaracion
+    - Quiero saber cual es el cronograma de vencimiento mensual o anual de @4ta
+    - Cual es el link para descargar mi cronograma de pago de mis @declaracion
+    - Como se el vencimiento de mis @declaracion
+    - No quiero que se me venza el @fecha para declarar
+    - Cuales son las @fecha en que debo presentar mi @declaracion
+    - Hasta cuando tengo para pagar lo que he declarado
+    - Que @fecha tengo para realizar mi @declaracion de @4ta
+    - Cual es el calendario de vencimientos de @4ta
+    - Me indicas en que fecha me toca declarar
+    - Cual es el calendario de vencimineto mensual y anual de @4ta
+    - Cual es la @fecha para mi @declaracion de @4ta
+    - Que dias son los vencimientos para @declaracion de @4ta
+    - En que fecha declaro mis @recibo_por_honorarios
+    - Como se si ya vencio la @declaracion de @4ta
+    - Donde veo el cronograma mensual de @devolucion de @4ta
+    - Que fecha me corresponde presentar mi @declaracion, según mi @ruc como independiente
+
+- intent: 41_ws_estado_solicitud_devolucion
+  examples: |
+    - He presentado devoluciones hace tiempo, hay alguna respuesta?
+    - Realice un trámite de devolución dónde la veo?
+    - Puedes pasarme la ruta para ver el estado de mi @solicitud_devolucion
+    - Ayudame a ver mi estatus de mi @solicitud_devolucion
+    - Hice una @solicitud_devolucion, cómo se encuentran?
+    - ¿cómo está mi solicitud?
+    - ¿está avanzando mi @solicitud_devolucion?
+    - ¿dónde está mi devolución?
+    - En qué paso se encuentra mi devolución
+    - En qué estado se encuentra mi @solicitud_devolucion?
+    - Cómo va mi @solicitud_devolucion?
+    - Quiero saber si mi devolución ya fue aprobada
+    - Presente una @solicitud_devolucion , quiero saber en qué está?
+
+- intent: 42_ws_condicion_domicilio_fiscal
+  examples: |
+    - Cual es la condición del df de mi @ruc
+    - El df del @ruc que condición tiene
+    - Me indican que estoy como @condicion_domicilio_fiscal quiero saberlo
+    - Como esta mi direccion @ruc
+    - Cómo se mira la condicion de mi domicilio
+    - Quiero saber la condición de mi df
+    - Quiero saber si estoy como @situacion_domicilio_fiscal
+    - El domicilio de mi @ruc esta bien?
+    - @inicio_conversacion cual es el estado de mi direccion actual?
+    - @inicio_conversacion como esta mi domicilio fiscal
+    - @inicio_conversacion que status tienen mi domicilio fiscal?
+    - Mi @ruc esta @situacion_domicilio_fiscal?
+    - Confirmame mi condicion de domicilio fiscal
+
+- intent: 43_ws_estado_ruc
+  examples: |
+    - Como esta mi @ruc en el sistema?
+    - Como se en que estado se encuentra mi @ruc?
+    - Como se si mi @ruc sigue @estado_ruc
+    - Quise hacer una operación con mi @ruc pero me denegaron, como se si esta @estado_ruc?
+    - Como saber si estoy en @estado_ruc?
+    - Hace mucho tiempo no uso mi @ruc, deseo saber en que estado se encuentra
+    - Cual es la ruta para saber el estado de mi @ruc
+    - En que condiciones esta mi @ruc
+    - Como sé si el @ruc que tengo esta @estado_ruc
+    - Como se si el @ruc que tengo esta @estado_ruc
+    - Mi @ruc no lo uso, está vigente
+
+- intent: 44_ws_cual_uit
+  examples: |
+    - Cual importe es una uit
+    - Que uit se debe usar
+    - @inicio_conversacion el monto de la uit donde se publica?
+    - @inicio_conversacion cómo calculo la uit?
+    - @inicio_conversacion cual es la uit de este año?
+    - Dime uit @año_actual?
+    - Qué uit aplico este año?
+    - A cuánto está la uit?
+    - Decir cual es la uit
+    - A cuánto asciende la unidad impositiva tributaria
+    - Donde puedo visualizar la uit vigente?
+    - Cual es el monto de cada unidad de referencia impositiva ?
+    - ¿cuál es el valor de una uit?
+    - Cuanto es una uit en @moneda
+    - Que monto tiene cada unidad de
+
+- intent: 45_ws_cual_tipo_cambio
+  examples: |
+    - Quiero saber el @tipo_cambio
+    - Donde veo el @tipo_cambio ?
+    - Qué tasa uso para convertir a dólares?
+    - Quiero comprar dólares, cuál es la tasa?
+    - Cuanto esta el dolar
+    - Dame el @tipo_cambio por fa?
+    - Me dices el @tipo_cambio de ayer ?
+    - Donde ubico el @tipo_cambio ?
+    - Qué @tipo_cambio tomaría para hacer una operación?
+    - Cuanto costaba el dolar ?
+    - Cuanto costo el dolar el @fecha
+    - Dime el equivalente en soles del dolar
+    - Cual es el cambio de @tipo_fecha
+    - Cuanto costaba el dolar ayer
+    - Cuanto costó el dólar la @fecha
+    - Emití un @recibo_por_honorarios en dólares el mes pasado, cuál era el @tipo_cambio ?
+
+
+
+
+
+
+
+
+
+#-----GENERICAS-------------
+- intent: saludos
+  examples: |
+    - hola, mi nombre es [Ernesto](nombre)
+    - hola
+    - Muy buenas
+    - Epaa
+    - Hola!
+    - cómo estas?
+    - hola qué tal
+    - hola cómo estás?
+    - Aupa
+    - Aupi
+    - holi
+    - ey
+    - heey
+    - ola
+    - hola qué tal!
+    - Holaaaaaa
+    - Buenas
+    - Buenos días
+    - Buenas tardes
+    - Buenos diasss
+    - hola holaaa
+    - que hay?
+    - ¿Cómo va?
+    - Saludos
+    - Quiero consultarte
+    - Tengo una inquietud
+    - Quiero preguntar algo mas
+    - Hay otra pregunta
+    - Una pregunta mas
+    - Tengo otra consulta
+    - Tengo otra pregunta
+    - Puedes orientarme
+    - Tengo preguntas
+    - Quiero información
+    - Me puede brindar información sobre la devolución
+    - Como funciona esto
+    - Puede decirme algo?
+    - Alguien?
+    - Necesito tener mayor información sobre
+    - Esta disponible?
+    - Esta?
+    - Holis
+    - Disculpe
+    - Un favor
+    - Oa, hoa
+    - Buen dia    
+
+- intent: agradecimiento
+  examples: |
+    - Gracias
+    - Muchas gracias
+    - gracias por la ayuda
+    - graciassss
+    - muchas muchas gracias
+    - grx
+    - Era lo que necesitaba, gracias
+    - muchas gracias
+    - gracias
+    - de verdad gracias
+    - te lo agradezco
+    - Thank you
+    - Thanks
+    - Agradecido
+    - En serio gracias
+    - grax
+    - Gracias de verdad
+    - Gracias por tu ayuda
+    - Justo lo que necesitaba gracias
+    - pucha, gracias de todos modos
+    - me despido, gracias
+    - ya no tengo mas dudas, muchas gracias
+    - gracias sofia, por su ayuda
+    - un beso, gracias
+    - un besito, gracias
+    - gracias señora
+    - gracias sra
+    - gracias srta
+    - gracias sofía
+    - gracias por su ayuda
+    - gracias por la información
+    - Todo estuvo claro, gracias    
+
+- intent: despedida
+  examples: |
+    - Adios
+    - Adiós
+    - Ciao
+    - Chao
+    - chao chao
+    - Nos vemos
+    - hasta pronto
+    - Hasta luego
+    - Hasta la próxima
+    - ok, adios
+    - te hablo luego
+    - te hablo más tarde
+    - Chao, buen trabajo!
+    - excelente, muchas gracias!
+    - adios!
+    - adiossss
+    - Un saludo
+    - Me despido
+    - bye
+
+- intent: acoso_sexual, insultos
+  examples: |
+    - Adios
+    - Muestrame esas lolas
+    - Muestrame el pene
+    - Métete este vibrador
+    - Me quiero venir en ti
+    - Me pones humedo
+    - Mastúrbame
+    - Hazme un orgasmo
+    - Hazme un blowjob
+    - Hazme una paja
+    - Hazmelo oral
+    - Hagamos una orgia
+    - Hablame sucio
+    - Garchemos
+    - Eyacula en mi
+    - Tienes porno
+    - Estoy excitada
+    - Contigo sin preservativo
+    - Mearte
+    - Porno
+    - Semen
+    - Tu clitoris
+    - Estoy excitado hagamoslo
+    - Te quiero culear
+    - Te pones humeda
+    - Tengo un fetiche
+    - Siente mis tetas
+    - Quiero tener cibersexo contigo
+    - Quiero sexo oral
+    - Que rico masoquista
+    - Que rica que estás
+    - Que llevas puesto
+    - Pornografia
+    - Perro hp
+    - Perra deliciosa
+    - No seas puta
+    - Muéstrame tus genitales
+    - Muestrame los pechos
+    - Muestrame ese culo
+
+
+- synonym: oficio
+  examples: |
+    - trabajo
+    - profesión
+    - profesión
+    - profesiones
+    - oficios
+    - cachuelo
+    - chamba
+    - labor
+    - tarea
+
+- synonym: Servicios de cuarta
+  examples: |
+    - Servicios de cuarta
+    - Servicios profesionales
+    - Servicios de 4ta
+    - Cuarta, 
+    - 4ta
+    - cuarta categoria
+    - 4ta categoría
+
+- synonym: hipotecario
+  examples: |
+    - credito hipotecario
+    - prestamo hipotacario
+    - credito casa
+    - prestamo casa
+    - hipotecario
+    
+- synonym:     essalud
+  examples: |
+    - essalud
+    - esalud
+    - Seguro estatal
+    - Seguro Publico
+
+- synonym:     quien_deposita
+  examples: |
+    - quien_deposita
+    - empresa
+    - empleador
+    - jefe
+    - gerente
+    - rrhh
+    - recursos humanos
+    - empresario
+    - empleadores
+    - institucion
+    - institución
